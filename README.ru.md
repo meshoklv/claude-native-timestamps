@@ -5,6 +5,7 @@
 <p align="center"><b>Время каждого сообщения — прямо в родном чате Claude Code в VS Code.</b></p>
 
 <p align="center">
+  <a href="https://github.com/meshoklv/claude-native-timestamps/actions/workflows/ci.yml"><img alt="CI" src="https://img.shields.io/github/actions/workflow/status/meshoklv/claude-native-timestamps/ci.yml?style=flat-square&label=CI"></a>
   <img alt="License" src="https://img.shields.io/github/license/meshoklv/claude-native-timestamps?style=flat-square">
   <img alt="VS Code" src="https://img.shields.io/badge/VS%20Code-%E2%89%A51.85-007ACC?style=flat-square">
   <img alt="JavaScript" src="https://img.shields.io/badge/language-JavaScript-F7DF1E?style=flat-square">
