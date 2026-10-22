@@ -1,0 +1,7 @@
+.github/**
+test/**
+docs/**
+!docs/cover.png
+*.vsix
+.gitignore
+CONTRIBUTING.md

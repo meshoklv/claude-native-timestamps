@@ -1,0 +1,46 @@
+{
+  "name": "claude-native-timestamps",
+  "displayName": "Claude Native Timestamps",
+  "description": "Shows the date and time of each message inside the native Claude Code chat panel.",
+  "version": "0.1.0",
+  "publisher": "meshoklv",
+  "license": "MIT",
+  "repository": { "type": "git", "url": "https://github.com/meshoklv/claude-native-timestamps.git" },
+  "engines": { "vscode": "^1.85.0" },
+  "categories": ["Other"],
+  "extensionKind": ["workspace"],
+  "activationEvents": ["onStartupFinished"],
+  "main": "./extension.js",
+  "scripts": { "test": "node --test test/format.test.js" },
+  "contributes": {
+    "commands": [
+      { "command": "ccNativeTs.repatch", "title": "Claude Timestamps: Apply / Re-apply" },
+      { "command": "ccNativeTs.unpatch", "title": "Claude Timestamps: Remove (restore original)" }
+    ],
+    "configuration": {
+      "title": "Claude Native Timestamps",
+      "properties": {
+        "ccNativeTs.timeZone": {
+          "type": "string",
+          "default": "local",
+          "markdownDescription": "Time zone for the labels: `local` (system time zone, default), `UTC`, an IANA name such as `Europe/Berlin` or `Asia/Tokyo`, or a fixed offset such as `UTC+9` or `UTC-03:30`."
+        },
+        "ccNativeTs.format": {
+          "type": "string",
+          "default": "yyyy-MM-dd HH:mm:ss",
+          "markdownDescription": "Label format. Tokens: `yyyy` `MM` `dd` `HH` (24h) `hh` (12h) `mm` `ss` `a` (AM/PM). Example: `HH:mm · dd.MM.yyyy`."
+        },
+        "ccNativeTs.transcriptsDir": {
+          "type": "string",
+          "default": "",
+          "markdownDescription": "Folder with Claude Code session transcripts (`*.jsonl` in per-project subfolders). Empty = `~/.claude/projects`."
+        },
+        "ccNativeTs.autoPatch": {
+          "type": "boolean",
+          "default": true,
+          "description": "Re-apply the patch automatically on startup (needed after every Claude Code update)."
+        }
+      }
+    }
+  }
+}

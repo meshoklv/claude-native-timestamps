@@ -1,0 +1,7 @@
+node_modules/
+*.vsix
+*.cc-ts-backup
+mapcache.json
+.DS_Store
+*.log
+.env
